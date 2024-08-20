@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirror Site</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #content {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="content" src="https://afkarfcom-pdf.hf.space"></iframe>
+    <script>
+        // Mengatur ukuran iframe agar memenuhi layar
+        const iframe = document.getElementById('content');
+        iframe.style.height = window.innerHeight + 'px';
+        iframe.style.width = window.innerWidth + 'px';
+
+        window.onresize = function() {
+            iframe.style.height = window.innerHeight + 'px';
+            iframe.style.width = window.innerWidth + 'px';
+        };
+    </script>
+</body>
+</html>
